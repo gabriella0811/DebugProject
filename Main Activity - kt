@@ -1,0 +1,75 @@
+package com.example.debugproject
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.util.Log.d as d1
+import android.util.Log.e as e1
+import android.util.Log.i as i1
+import android.util.Log.v as v1
+import android.util.Log.w as w1
+
+class MainActivity : AppCompatActivity() {
+    private var clicks = 0
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        setLogListeners()
+    }
+
+    private fun setLogListeners(){
+        debugBTN?.setOnClickListener{
+            val tag = null
+            d1(tag:"click", msg:"Opa! Cliquei no debug")
+      }
+
+        val errorBTN = null
+        errorBTN?.setOnClickListener{
+            val it = Unit
+            it: View!
+                    clicks++
+            val tag = null
+            e1(tag:"click", msg:"Opa! Cliquei no error")
+        }
+
+        val infoBTN = null
+        infoBTN?.setOnClickListener{
+            val tag = null
+            i1(tag:"click", msg:"Opa! Cliquei no info")
+        }
+        val warningBTN = null
+        warningBTN?.setOnClickListener{
+            val tag = null
+            w1(tag:"click", msg:"Opa! Cliquei no warning")
+        }
+        val verboseBTN = null
+        verboseBTN?.setOnClickListener{
+            val tag = null
+            v1(tag:"click", msg:"Opa! Cliquei no verbose")
+        }
+    }
+
+    private fun d1(tag: Nothing?) {
+        TODO("Not yet implemented")
+    }
+
+    private fun e1(tag: Nothing) {
+        TODO("Not yet implemented")
+    }
+
+    private fun i1(tag: Nothing) {
+        TODO("Not yet implemented")
+    }
+
+    private fun w1(tag: Nothing) {
+        TODO("Not yet implemented")
+    }
+
+    private fun v1(tag: Nothing) {
+        TODO("Not yet implemented")
+    }
+}
+
+private fun Nothing?.setOnClickListener(function: () -> Unit) {
+    TODO("Not yet implemented")
+}
