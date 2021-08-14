@@ -1,0 +1,8 @@
+package com.example.debugproject
+
+object debugBTN {
+    fun setOnClickListener(any: Any) {
+
+    }
+
+}
